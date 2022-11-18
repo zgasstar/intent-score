@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient2">
 
     <TextView
         android:id="@+id/textView"
@@ -12,6 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="Half Live Score"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +28,9 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:inputType="textPersonName"
-        android:text="Home Team"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:hint="Home Team"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -38,7 +43,9 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
         android:inputType="textPersonName"
-        android:text="Away Team"
+        android:hint="Away Team"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btn_team"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

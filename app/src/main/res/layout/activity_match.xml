@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MatchActivity">
+    tools:context=".MatchActivity"
+    android:background="@drawable/gradient2">
 
     <TextView
         android:id="@+id/txt_home"
@@ -12,6 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Home Team"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,20 +42,46 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="3"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         android:textSize="80sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/home_logo" />
 
-    <Button
-        android:id="@+id/btn_add_home"
+    <LinearLayout
+        android:id="@+id/input_add_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Home Score"
+        android:orientation="horizontal"
+        android:gravity="center"
         android:layout_marginBottom="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        >
+        <Button
+            android:id="@+id/satu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="+1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <Button
+            android:id="@+id/dua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <Button
+            android:id="@+id/tiga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="+3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+    </LinearLayout>
 
 
     <TextView
@@ -62,6 +91,8 @@
         android:text="TextView"
         android:layout_marginBottom="20dp"
         android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -82,28 +113,64 @@
         android:layout_height="wrap_content"
         android:text="3"
         android:textSize="80sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/away_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/btn_add_away"
+    <LinearLayout
+        android:id="@+id/input_add_away"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
         android:layout_marginTop="40dp"
-        android:text="Add Away Score"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        >
+        <Button
+            android:id="@+id/satuu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="+1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <Button
+            android:id="@+id/duaa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <Button
+            android:id="@+id/tigaa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="+3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+    </LinearLayout>
 
     <Button
-        android:id="@+id/btn_result"
+        android:id="@+id/hasil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cek Hasil"
+        android:layout_marginRight="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:layout_gravity="center_vertical"
+        app:layout_constraintStart_toEndOf="@+id/hasil"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
